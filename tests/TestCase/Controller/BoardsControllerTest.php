@@ -21,6 +21,16 @@ class BoardsControllerTest extends IntegrationTestCase
     ];
 
     /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
      * Test index method
      *
      * @return void
@@ -46,6 +56,26 @@ class BoardsControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testAdd()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test show method
+     *
+     * @return void
+     */
+    public function testShow()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test show2 method
+     *
+     * @return void
+     */
+    public function testShow2()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

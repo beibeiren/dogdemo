@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use Cake\I18n\I18n;
 /**
  * Boards Controller
  *
@@ -15,10 +16,20 @@ class BoardsController extends AppController
 
     private $people;
 
+    public $paginate = [
+        'limit' => 5,
+        'order' => [
+            'id' => 'DESC'
+        ],
+        'contain' => ['People']
+    ];
+
     public function  initialize()
     {
         parent::initialize();
         $this->people = TableRegistry::get('People');
+        I18n::locale('en_US');
+        $this->loadComponent('Paginator');
     }
 
     /**
@@ -29,12 +40,14 @@ class BoardsController extends AppController
 
     public function index()
     {
-        $boards = $this->Boards
-            ->find('all')
-            ->order(['Boards.id' => 'DESC'])
-            ->contain(['People']);
+        // $boards = $this->Boards
+        //    ->find('all')
+        //    ->order(['Boards.id' => 'DESC'])
+        //    ->contain(['People']);
 
+        $boards = $this->paginate($this->Boards);
         $this->set(compact('boards'));
+        $this->set('count', $boards->count());
     }
 
     /**
