@@ -1,4 +1,14 @@
 <?= $this->Html->css('cake') ?>
+<div>
+<?= $this->Form->create(null, ['url' => ['action' => 'index']]); ?>
+    <select class="lang" name="lang">
+        <option value="en_US">English</option>
+        <option value="ja_JP">日本語</option>
+    </select>
+<?= $this->Form->button(__('submit')); ?>
+<?= $this->Form->end(); ?>
+</div>
+
 <h1><?= __('boards') ?></h1>
 <p><?=$this->Html->link(
 __('add.board') ,
@@ -45,10 +55,10 @@ __('add.board') ,
  </div>
  <div class="paginator">
    <ul class="pagination">
-     <?= $this->Paginator->first(' << first') ?>
-     <?= $this->Paginator->prev(' < prev') ?>
-     <?= $this->Paginator->next(' next >') ?>
-     <?= $this->Paginator->last(' last >>') ?>
+     <?= $this->Paginator->first(' << first', ['target' => '_blank']) ?>
+     <?= $this->Paginator->prev(' < prev', ['target' => '_blank']) ?>
+     <?= $this->Paginator->next(' next >', ['target' => '_blank']) ?>
+     <?= $this->Paginator->last(' last >>', ['target' => '_blank']) ?>
    </ul>
  </div>
  <div class="paginator">

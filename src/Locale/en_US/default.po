@@ -57,6 +57,9 @@ msgstr "title"
 msgid "{0} post"
 msgstr "post count:{0} "
 
+msgid "submit"
+msgstr "Submit"
+
 #: Template/Boards/view.ctp:9
 #: Template/People/add.ctp:9
 #: Template/People/edit.ctp:9

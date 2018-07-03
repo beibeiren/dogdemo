@@ -27,8 +27,8 @@ class BoardsController extends AppController
     public function  initialize()
     {
         parent::initialize();
-        $this->people = TableRegistry::get('People');
-        I18n::locale('en_US');
+        $this->people = TableRegistry::getTableLocator('People');
+        //I18n::setLocale('ja_JP');
         $this->loadComponent('Paginator');
     }
 
@@ -44,6 +44,10 @@ class BoardsController extends AppController
         //    ->find('all')
         //    ->order(['Boards.id' => 'DESC'])
         //    ->contain(['People']);
+        if($this->request->is('post')){
+            $lang = $this->request->getData("lang");
+            I18n::setLocale($lang);
+        }
 
         $boards = $this->paginate($this->Boards);
         $this->set(compact('boards'));
