@@ -79,11 +79,11 @@ __('add.board') ,
  <hr>
  <p>
     <?php
-        $this->Html->addCrumb('First', '/boards/index');
-        $this->Html->addCrumb('Second', '/boards/index');
-        $this->Html->addCrumb('Last', '/boards/index');
+        // $this->Html->addCrumb('First', '/boards/index');
+        // $this->Html->addCrumb('Second', '/boards/index');
+        // $this->Html->addCrumb('Last', '/boards/index');
     ?>
-    <?= $this->Html->getCrumbs(' | ', 'Top'); ?>
+    <?php // echo $this->Html->getCrumbs(' | ', 'Top'); ?>
  </p>
  <hr>
  <div >
