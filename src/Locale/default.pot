@@ -54,6 +54,9 @@ msgstr "user"
 msgid "title"
 msgstr "title"
 
+msgid "flash.message"
+msgstr "flash message"
+
 #: Template/Boards/view.ctp:9
 #: Template/People/add.ctp:9
 #: Template/People/edit.ctp:9

@@ -57,6 +57,11 @@ msgstr "タイトル"
 msgid "{0} post"
 msgstr "{0}個の投稿があります。 "
 
+msgid "flash.message"
+msgstr "フラッシュメッセージ"
+
+
+
 #: Template/Boards/view.ctp:9
 #: Template/People/add.ctp:9
 #: Template/People/edit.ctp:9
