@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use App\Model\Entity\User;
+
 
 
 class  FormsController extends AppController
