@@ -60,6 +60,8 @@ msgstr "post count:{0} "
 msgid "flash.message"
 msgstr "flash message"
 
+msgid "submit"
+msgstr "Submit"
 
 #: Template/Boards/view.ctp:9
 #: Template/People/add.ctp:9

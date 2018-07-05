@@ -177,6 +177,9 @@ msgstr ""
 msgid "last"
 msgstr ""
 
+msgid "submit"
+msgstr "Submit"
+
 #: Template/People/index.ctp:47
 msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
 msgstr ""

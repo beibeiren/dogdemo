@@ -37,8 +37,9 @@ class BoardsControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
+        $this->get('/boards');
+        $this->assertResponseOk();
+}
 
     /**
      * Test view method

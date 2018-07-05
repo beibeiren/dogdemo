@@ -61,6 +61,8 @@ msgid "flash.message"
 msgstr "フラッシュメッセージ"
 
 
+msgid "submit"
+msgstr "送信"
 
 #: Template/Boards/view.ctp:9
 #: Template/People/add.ctp:9
