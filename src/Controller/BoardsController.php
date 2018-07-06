@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use Cake\I18n\I18n;
+use Cake\Event\Event;
 /**
  * Boards Controller
  *
@@ -30,6 +31,12 @@ class BoardsController extends AppController
         $this->people = TableRegistry::getTableLocator('People');
         //I18n::setLocale('ja_JP');
         $this->loadComponent('Paginator');
+    }
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['index']);
     }
 
     /**
