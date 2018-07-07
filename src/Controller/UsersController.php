@@ -13,7 +13,7 @@ use Cake\Auth\DefaultPasswordHasher;
  */
 class UsersController extends AppController
 {
-
+/*
     public function isAuthorized($user=null)
     {
         $action = $this->request->params['action'];
@@ -28,6 +28,7 @@ class UsersController extends AppController
         }
         return false;
     }
+    */
     /**
      * Index method
      *
@@ -44,9 +45,10 @@ class UsersController extends AppController
     {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
-            //$password = (new DefaultPasswordHasher)->hash('123');
-            //var_dump($password);
-            // exit;
+            // 密码加密
+            $password = (new DefaultPasswordHasher)->hash('123');
+            var_dump($password);
+            exit;
             if(!empty($user)) {
                 $this->Auth->setUser($user);
                 $this->Flash->success('ログイン成功しました。');

@@ -19,11 +19,11 @@ class CompController extends AppController
      */
     public function index()
     {
-       $this->Flash->set('クッリクすると消えます。');
-       $this->Flash->set(__('flash.message'));
+       //$this->Flash->set('クッリクすると消えます。');
+       //$this->Flash->set(__('flash.message'));
        $this->Flash->success('成功しました', ['element' => 'flash']);
        $this->Flash->error('失敗です');
-       $this->Flash->info('infoメッセージを表示する');
+       //$this->Flash->info('infoメッセージを表示する');
        $this->Flash->set('クッリクすると消えます。',['element' => 'info', 'key' => 'info']);
        $this->Flash->set('クッリクすると消えます。',['element' => 'error', 'key' => 'error']);
     }
