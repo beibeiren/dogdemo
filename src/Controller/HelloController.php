@@ -33,6 +33,7 @@ class HelloController extends AppController
         $this->autoRender = true;
     }
     public function  query(){
+        //　http://localhost:8765/boards?username=123
         // $username = $this->request->getQuery("username");
         $username = $this->request['url']['username'];
         echo $username;
@@ -40,6 +41,26 @@ class HelloController extends AppController
 
     public function form() {
         $this->autoRender = true;
+        if ($this->request->is('post')) {
+            $chks = $this->request->getData('chks');
+            var_dump($chks);
+            exit;
+        }
+    }
+    public function sendForm(){
+         $this->autoRender = true;
+         $str = $this->request->getData('HelloForm')['text1'];
+         //$str = $data['text1'];
+         var_dump($str);
+         exit;
+         $result = "";
+         if ($str != ""){
+            $result = "you type: " . $str;
+         } else {
+            $result = "empty.";
+         }
+         $this->set("result", h($result));
+
     }
 
 }
